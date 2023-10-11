@@ -35,3 +35,32 @@ console.log(typeof myFunction);
 // bigint > bigint
 // object && array && null > object
 // functoin > function
+
+
+/* 
+    STACK [primitive type]
+        > copy of the variable
+    HEAP [non-primitive type] 
+        > reference (change the original)
+*/
+
+// STACK Example
+let youtubeName = "youtubeNameOne"
+let anotherYtName = youtubeName
+
+anotherYtName = "youtubeNameTwo"
+
+console.log(youtubeName); // youtubeNameOne
+console.log(anotherYtName); // youtubeNameTwo
+
+// HEAP Example
+const userOne = {
+    name: 'nameOne',
+    age: '24'
+}
+
+const userTwo = userOne
+userTwo.age = 27
+
+console.log(userOne.age); // 27 change the original value of userOne.age
+console.log(userTwo.age); // 27
