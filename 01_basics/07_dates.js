@@ -1,4 +1,4 @@
-let myDate = new Date()
+let myDate = new Date();
 
 // console.log(myDate);
 // console.log(typeof myDate); // Object
@@ -13,18 +13,18 @@ let myDate = new Date()
 
 // let myCreatedDate = new Date(2023, 0, 22)
 // let myCreatedDate = new Date(2023, 0, 22, 6, 3)
-let myCreatedDate = new Date("2023-01-22")
+let myCreatedDate = new Date("2023-01-22");
 // console.log(myCreatedDate.toLocaleString());
 // console.log(myCreatedDate.getTime());
 
-let myTimeStamp = Date.now()
+let myTimeStamp = Date.now();
 // console.log(Math.floor(myTimeStamp/1000));
 
-let newDate = new Date()
+let newDate = new Date();
 // console.log(newDate.getMonth() + 1);
 
 newDate.toLocaleDateString("default", {
-    weekday: "long"
-})
+  weekday: "long",
+});
 
 console.log(newDate);

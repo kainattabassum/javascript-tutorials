@@ -1,27 +1,27 @@
 //  Primitive - 7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
-const score = 100
-const scoreValue = 100.3
+const score = 100;
+const scoreValue = 100.3;
 
-const isLoggedIn = false
-const outsideTemp = null
+const isLoggedIn = false;
+const outsideTemp = null;
 let userEmail;
 
-const id = Symbol('123')
-const anotherId = Symbol('123')
+const id = Symbol("123");
+const anotherId = Symbol("123");
 // console.log(id === anotherId);
 
-const bigNumber = 3456543576654356754n
+const bigNumber = 3456543576654356754n;
 
 // Reference (Non-Primitive) - Array, Objects, Functions
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
-    name: "hitesh",
-    age: 22,
-}
+  name: "kainat",
+  age: 22,
+};
 
-const myFunction = function(){
-    console.log("Hello world");
-}
+const myFunction = function () {
+  console.log("Hello world");
+};
 
 console.log(typeof myFunction);
 
@@ -31,11 +31,10 @@ console.log(typeof myFunction);
 // number > number
 // boolean > boolean
 // undefined > undefined
-// symbol > symbol 
+// symbol > symbol
 // bigint > bigint
 // object && array && null > object
 // functoin > function
-
 
 /* 
     STACK [primitive type]
@@ -45,22 +44,22 @@ console.log(typeof myFunction);
 */
 
 // STACK Example
-let youtubeName = "youtubeNameOne"
-let anotherYtName = youtubeName
+let youtubeName = "youtubeNameOne";
+let anotherYtName = youtubeName;
 
-anotherYtName = "youtubeNameTwo"
+anotherYtName = "youtubeNameTwo";
 
 console.log(youtubeName); // youtubeNameOne
 console.log(anotherYtName); // youtubeNameTwo
 
 // HEAP Example
 const userOne = {
-    name: 'nameOne',
-    age: '24'
-}
+  name: "nameOne",
+  age: "24",
+};
 
-const userTwo = userOne
-userTwo.age = 27
+const userTwo = userOne;
+userTwo.age = 27;
 
 console.log(userOne.age); // 27 change the original value of userOne.age
 console.log(userTwo.age); // 27
