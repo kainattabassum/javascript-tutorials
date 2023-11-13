@@ -1,3 +1,41 @@
+# Project Related JavaScript
+
+## Project 01
+
+### Solution:
+
+```javascript
+const buttons = document.querySelectorAll(".button");
+const body = document.querySelector("body");
+
+buttons.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    switch (e.target.id) {
+      case "grey":
+        body.style.background = e.target.id;
+        break;
+      case "white":
+        body.style.background = e.target.id;
+        break;
+      case "blue":
+        body.style.background = e.target.id;
+        break;
+      case "yellow":
+        body.style.background = e.target.id;
+        break;
+      default:
+        body.style.background = "skyblue";
+        break;
+    }
+  });
+});
+```
+
+## Project 02
+
+### Solution:
+
+```javascript
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function (e) {
@@ -21,3 +59,11 @@ form.addEventListener("submit", function (e) {
     }
   }
 });
+```
+
+## Project 02
+
+### Solution:
+``` javascript
+
+```
