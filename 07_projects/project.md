@@ -1,6 +1,6 @@
 # Project Related JavaScript
 
-## Project 01
+## Project 01 - Change Background Color
 
 ### Solution:
 
@@ -31,7 +31,7 @@ buttons.forEach(function (button) {
 });
 ```
 
-## Project 02
+## Project 02 - BMI Calculator
 
 ### Solution:
 
@@ -61,9 +61,24 @@ form.addEventListener("submit", function (e) {
 });
 ```
 
-## Project 02
+## Project 03 - Digital Clock
 
 ### Solution:
 ``` javascript
+const clock = document.querySelector("#clock")
+setInterval(function() {
+    let date = new Date()
+    clock.innerHTML = date.toLocaleTimeString()
+}, 1000)
+```
 
+## Project 04 - Digital Clock
+
+### Solution:
+``` javascript
+const clock = document.querySelector("#clock")
+setInterval(function() {
+    let date = new Date()
+    clock.innerHTML = date.toLocaleTimeString()
+}, 1000)
 ```
