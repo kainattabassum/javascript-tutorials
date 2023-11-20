@@ -21,6 +21,7 @@ nav {
   gap: 0.5rem;
   border-bottom: solid 1px #aaa;
   background-color: #eee;
+  width: 100%;
 }
 
 nav a {
