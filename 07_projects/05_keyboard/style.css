@@ -3,6 +3,11 @@ th,
 td {
   border: 1px solid #e7e7e7;
 }
+
+th, td {
+  padding: 10px 20px;
+}
+
 .project {
   background-color: #1c1c1c;
   color: #ffffff;

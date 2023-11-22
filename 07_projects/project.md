@@ -167,5 +167,58 @@ function newGame() {
 
 ### Solution:
 ``` javascript
+const insert = document.getElementById("insert");
+window.addEventListener("keydown", function (e) {
+  insert.innerHTML = `<div class="color">
+        <table>
+            <tr>
+                <th>key</th>
+                <th>keyCode</th>
+                <th>code</th>
+            </tr>
+            <tr>
+                <td>${e.key === " " ? "Space" : e.key}</td>
+                <td>${e.keyCode}</td>
+                <td>${e.code}</td>
+            </tr>
+        </table>
+    <div>`;
+});
+```
 
+## Project 06 - Unlimited Background Color 
+
+### Solution:
+``` javascript
+const randomColor = function () {
+  const hex = "0123456789ABCDEF";
+  let color = "#";
+
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+const startButton = document.querySelector("#start");
+const stopButton = document.querySelector("#stop");
+let intervalId;
+
+const changeBodyColor = function () {
+  document.body.style.background = randomColor();
+};
+
+const startChangingColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBodyColor, 1000);
+  }
+};
+
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+startButton.addEventListener("click", startChangingColor);
+stopButton.addEventListener("click", stopChangingColor);
 ```
