@@ -1,8 +1,7 @@
 // singleton - constructor [Object.create]
 
 const mySymbol = Symbol("key1");
-
-// Object literals
+// Object literals is not singleton can create multiple instances
 const user = {
   name: "Kainat",
   "full name": "Kainat Tabassum",
@@ -13,7 +12,6 @@ const user = {
   isLoggedIn: false,
   lastLoginDays: ["Monday", "Thursday"],
 };
-
 // console.log(user.email);
 // console.log(user["full name"]);
 // console.log(user[mySymbol]);
@@ -23,7 +21,6 @@ user.email = "changed.mail@gmail.com";
 // console.log(user);
 
 // Object.freeze(user);
-
 user.email = "microsoft.mail@hotmail.com";
 // console.log(user);
 
@@ -33,6 +30,7 @@ user.greeting = function () {
 user.greeting2 = function () {
   console.log(`Hello, ${this.name}`);
 };
-
 console.log(user.greeting());
 console.log(user.greeting2());
+
+console.log(user);
