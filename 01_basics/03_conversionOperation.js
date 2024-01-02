@@ -1,22 +1,27 @@
 let score = null;
-// console.log(typeof score);
-// console.log(typeof(score));
+/*
+    How to write typeof method
+      console.log(typeof score);
+      console.log(typeof(score));
+*/
 
 let valueInNumber = Number(score);
-// console.log(typeof valueInNumber);
-// console.log(valueInNumber);
+// console.log(typeof valueInNumber); // number
+// console.log(valueInNumber); // 0
 
 // "33" => 33
-// "33abc" => NaN
+// "33abc" => NaN [Not a Number]
 // true => 1; false => 0
 // null => 0
 // undefined => NaN
 
 let isLoggedIn = undefined;
 let booleanIsLoggedIn = Boolean(isLoggedIn);
+// console.log(typeof booleanIsLoggedIn);
 // console.log(booleanIsLoggedIn); // false
 
-// 1 => true; 0 => false
+// 1 => true; 
+// 0 => false
 // "" => false
 // "kainat" => true
 
@@ -50,8 +55,8 @@ let str3 = str1 + str2;
 
 // console.log( (3 + 4) * 5 % 3); // 2
 
-// console.log(+true); // not - 1
-// console.log(+""); // not - 2
+// console.log(+true); // not
+// console.log(+""); // not
 
 let num1, num2, num3;
 num1 = num2 = num3 = 2 + 2;
