@@ -3,7 +3,7 @@ const userInfo = {};
 userInfo.id = "123xyz";
 userInfo.name = "Sami";
 userInfo.isLoggedIn = false;
-// console.log(userInfo);
+// console.log(userInfo); // { id: '123xyz', name: 'Sami', isLoggedIn: false }
 
 const regularUser = {
   email: "username@gmail.com",
@@ -12,16 +12,13 @@ const regularUser = {
     lastname: "tabassum",
   },
 };
-
-// console.log(regularUser.usefullName.lastname);
+// console.log(regularUser.usefullName.lastname); // tabassum
 
 const obj1 = { 1: "a", 2: "b" };
 const obj2 = { 3: "c", 4: "d" };
-
-// const obj3 = { obj1, obj2 }
-// const obj3 = Object.assign({}, obj1, obj2) // {} optional - target
-const obj3 = { ...obj1, ...obj2 };
-
+// const obj3 = { obj1, obj2 } // { obj1: { '1': 'a', '2': 'b' }, obj2: { '3': 'c', '4': 'd' } }
+// const obj3 = Object.assign({}, obj1, obj2) // {} optional - target -> { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+const obj3 = { ...obj1, ...obj2 }; // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 // console.log(obj3);
 
 const users = [
@@ -46,12 +43,12 @@ const users = [
     email: "user5@gmail.com",
   },
 ];
-// console.log(users[1].email);
+// console.log(users[1].email); // user1@gmail.com
 
-// console.log(userInfo);
-// console.log(Object.keys(userInfo));
-// console.log(Object.values(userInfo));
-// console.log(Object.entries(userInfo));
+console.log(userInfo); // { id: '123xyz', name: 'Sami', isLoggedIn: false }
+console.log(Object.keys(userInfo)); // [ 'id', 'name', 'isLoggedIn' ]
+console.log(Object.values(userInfo)); // [ '123xyz', 'Sami', false ]
+console.log(Object.entries(userInfo)); // [ [ 'id', '123xyz' ], [ 'name', 'Sami' ], [ 'isLoggedIn', false ] ]
 
-// console.log(userInfo.hasOwnProperty('isLoggedIn'));
-// console.log(userInfo.hasOwnProperty('isLoggedOut'));
+console.log(userInfo.hasOwnProperty('isLoggedIn')); // true
+console.log(userInfo.hasOwnProperty('isLoggedOut')); // false
