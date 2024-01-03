@@ -1,6 +1,6 @@
 // let > Identifier 'c > variable-name' has already been declared but var override
 
-// var c = 300
+var c = 300;
 let a = 300; // global-scope
 
 // block-scope {}
@@ -9,9 +9,7 @@ if (true) {
   const b = 20;
   // console.log("INNER a value:", a);
 }
-
 // console.log(a);
-// console.log(b);
 // console.log(c);
 
 function one() {
@@ -19,7 +17,7 @@ function one() {
 
   function two() {
     const website = "youtube";
-    // console.log(username);
+    // console.log(username + "-" + website);
   }
   // console.log(website); // ReferenceError: website is not defined
   two();
@@ -32,22 +30,21 @@ if (true) {
     const website = " youtube";
     // console.log(username + website);
   }
-  // console.log(website);
+  // console.log(website); // ReferenceError: website is not defined
 }
 
-// console.log(username);
+// console.log(username); // ReferenceError: username is not defined
 
-// ++++++++++++++++++ interesting ++++++++++++++++++
-addOne(3); // run
+// ++++++++++++++++++ INTERESTING ++++++++++++++++++
+console.log(addOne(10)); // run
 function addOne(num) {
   return num + 1;
 }
-addOne(3);
+console.log(addOne(3));
 
-addTwo(4); // ReferenceError: Cannot access 'addTwo' before initialization {Hoisting}
-
-// function expression
+// console.log(addTwo(4)); // ReferenceError: Cannot access 'addTwo' before initialization {Hoisting}
+// function expression -> const variableName = function() {}
 const addTwo = function (num) {
   return num + 2;
 };
-addTwo(4);
+console.log(addTwo(4));

@@ -1,5 +1,5 @@
 // Immediately Invoked Function Expressions (IIFE)
-// (function definition)(execution) => ()()
+// (function definition)(execution) -> (() => {})()
 // for global scope pollution
 
 (function chai() {
