@@ -1,13 +1,4 @@
-const coding = ["js", "ruby", "java", "python", "cpp"];
-
-const values = coding.forEach((element) => {
-  // console.log(element);
-  return element; // no return > undefined
-});
-// console.log(values);
-
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 const newNumbs = myNums.filter((num) => num > 4);
 // console.log(newNumbs);
 
@@ -17,7 +8,7 @@ myNums.forEach((num) => {
     forEachNum.push(num);
   }
 });
-// console.log(forNum);
+// console.log(forEachNum);
 
 const books = [
   { title: "Book One", genre: "Fiction", publish: 1981, edition: 2004 },

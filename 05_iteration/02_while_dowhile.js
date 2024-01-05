@@ -1,6 +1,7 @@
 let index = 0;
 while (index <= 10) {
   // console.log(`Value of index is ${index}`);
+  // index++
   index = index + 2;
 }
 
@@ -13,6 +14,6 @@ while (arr < myArray.length) {
 
 let score = 11;
 do {
-  console.log(`Score is ${score}`);
+  console.log(`Score is ${score}`); // Score is 11
   score++;
 } while (score <= 10);

@@ -19,10 +19,8 @@ mapping.set("PAK", "Pakistan");
 mapping.set("IN", "India");
 mapping.set("USA", "United State of America");
 mapping.set("FR", "France");
-mapping.set("IN", "India"); // Unique Value > ignore
-
+mapping.set("IN", "India"); // Unique Value > ignored
 // console.log(mapping);
-
 for (const [key, value] of mapping) {
   //  console.log(`${key} - ${value}`);
 }
