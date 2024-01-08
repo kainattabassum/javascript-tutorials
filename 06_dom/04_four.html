@@ -5,39 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Learning</title>
   </head>
+
   <body style="background-color: #212121; color: #fff">
     <ul class="langauge">
       <li>javascript</li>
     </ul>
   </body>
   <script>
-        function addLanguage(langName) {
-            const listItem = document.createElement('li')
-            listItem.innerHTML = langName
-            document.querySelector('.langauge').appendChild(listItem)
-        }
-        addLanguage('python')
-        addLanguage('typescript')
+    function addLanguage(langName) {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = langName;
+      document.querySelector(".langauge").appendChild(listItem);
+    }
+    addLanguage("python");
+    addLanguage("typescript");
 
-        function addOptiLanguage(langName){
-            const listItem = document.createElement('li')
-            listItem.appendChild(document.createTextNode(langName))
-            document.querySelector('.langauge').appendChild(listItem)
-        }
-        addOptiLanguage('golang')
+    function addOptiLanguage(langName) {
+      const listItem = document.createElement("li");
+      listItem.appendChild(document.createTextNode(langName));
+      document.querySelector(".langauge").appendChild(listItem);
+    }
+    addOptiLanguage("golang");
 
-        // ++++++++++++ EDIT VALUE
-        const secondLanguageChild = document.querySelector('li:nth-child(2)')
-        // secondLanguageChild.innerHTML = "mojo"
-        const newList = document.createElement("li")
-        newList.textContent = "mojo"
-        secondLanguageChild.replaceWith(newList)
+    // ++++++++++++ EDIT VALUE
+    const secondLanguageChild = document.querySelector("li:nth-child(2)");
+    // secondLanguageChild.innerHTML = "mojo"
+    const newList = document.createElement("li");
+    newList.textContent = "mojo";
+    secondLanguageChild.replaceWith(newList);
 
-        const firstLanguageChild = document.querySelector("li:first-child")
-        firstLanguageChild.outerHTML = `<li>ruby</li>`
+    const firstLanguageChild = document.querySelector("li:first-child");
+    firstLanguageChild.outerHTML = `<li>ruby</li>`;
 
-        // ++++++++++++ REMOVE VALUE
-        const lastLanguageChild = document.querySelector('li:last-child')
-        lastLanguageChild.remove()
+    // ++++++++++++ REMOVE VALUE
+    const lastLanguageChild = document.querySelector("li:last-child");
+    lastLanguageChild.remove();
   </script>
 </html>
