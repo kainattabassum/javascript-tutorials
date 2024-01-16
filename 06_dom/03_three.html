@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Learning</title>
-</head>
+  </head>
 
-<body style="background-color: #212121; color: #fff">
+  <body style="background-color: #212121; color: #fff"></body>
+  <script>
+    const mainDiv = document.createElement("div");
+    mainDiv.className = "wrapper";
+    mainDiv.id = Math.floor(Math.random() * 10 + 1);
+    mainDiv.setAttribute("title", "generate title");
 
-</body>
-<script>
-    const mainDiv = document.createElement('div')
-    mainDiv.className = "wrapper"
-    mainDiv.id = Math.floor(Math.random() * 10 + 1)
-    mainDiv.setAttribute("title", "generate title")
-
-    mainDiv.style.backgroundColor = "purple"
-    mainDiv.style.padding = "10px"
-    mainDiv.style.borderRadius = "6px"
+    mainDiv.style.backgroundColor = "purple";
+    mainDiv.style.padding = "10px";
+    mainDiv.style.borderRadius = "6px";
 
     // mainDiv.innerText = "main div wrapper here!"
-    const addText = document.createTextNode("main div wrapper here!")
-    mainDiv.appendChild(addText)
+    const addText = document.createTextNode("main div wrapper here!");
+    mainDiv.appendChild(addText);
 
-    document.body.appendChild(mainDiv)
+    document.body.appendChild(mainDiv);
     console.log(mainDiv);
-</script>
-
+  </script>
 </html>
