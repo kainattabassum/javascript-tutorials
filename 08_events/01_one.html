@@ -65,6 +65,7 @@
     // }
 
     // attachEvent() > internet explorer
+
     // JQuery - on event listener
 
     // type, timestamp, defaultPrevented
@@ -79,23 +80,27 @@
     //   function (e) {
     //     console.log("Click inside the ul");
     //   },
-    //   false
+    //   false // true > event capturing [ child to parent ]
     // );
 
-    // document.getElementById("owl").addEventListener(
-    //   "click",
-    //   function (e) {
-    //     console.log("Owl Clicked!!");
-    //     e.stopPropagation(); // this will prevent to bubble to parent element
-    //   },
-    //   false
-    // );
+    document.getElementById("owl").addEventListener(
+      "click",
+      function (e) {
+        console.log("Owl Clicked!!");
+        e.stopPropagation(); // this will prevent to bubble to parent element
+      },
+      false
+    );
 
-    // document.getElementById("google").addEventListener("click", function (e) {
-    //   e.preventDefault();
-    //   e.stopPropagation();
-    //   console.log("google clicked");
-    // }, false);
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("google clicked");
+      },
+      false
+    );
 
     document.querySelector("#images").addEventListener(
       "click",
