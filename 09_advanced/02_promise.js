@@ -2,6 +2,8 @@
 // Q & bluebird library as Promise
 // > Do as async task
 // > DB calls, cryptography, network
+
+// PromiseOne
 const promiseOne = new Promise(function (resolve, reject) {
   setTimeout(function () {
     console.log("Async task is complete");
@@ -9,9 +11,10 @@ const promiseOne = new Promise(function (resolve, reject) {
   }, 1000);
 });
 promiseOne.then(function () {
-  console.log("Promise consumed");
+  console.log("PromiseOne consumed");
 });
 
+// PromiseTwo - in a single line
 new Promise(function (resolve, reject) {
   setTimeout(() => {
     console.log("Async Task 2 completed");
@@ -21,6 +24,7 @@ new Promise(function (resolve, reject) {
   console.log("task 2 resolved");
 });
 
+// PromiseThree - can pass data in resolve
 const promiseThree = new Promise(function (resolve, reject) {
   setTimeout(() => {
     resolve({
@@ -33,6 +37,7 @@ promiseThree.then(function (user) {
   console.log(user);
 });
 
+// PromiseFour - reject
 const promiseFour = new Promise(function (resolve, reject) {
   setTimeout(() => {
     let error = true;
@@ -41,7 +46,7 @@ const promiseFour = new Promise(function (resolve, reject) {
         username: "kainat",
       });
     } else {
-      reject("ERROR: Something went wrong.");
+      reject("ERROR: Something went wrong."); // ERROR: Something went wrong.
     }
   }, 1000);
 });
@@ -56,8 +61,9 @@ promiseFour
   .catch((error) => {
     console.log(error);
   })
-  .finally(() => console.log("promise is either resolve or reject"));
+  .finally(() => console.log("promise is either resolve or reject")); // promise is either resolve or reject
 
+// PromiseFive - async & await with try{}catch(){}
 const promiseFive = new Promise((resolve, reject) => {
   setTimeout(() => {
     let error = false;
@@ -74,27 +80,23 @@ const promiseFive = new Promise((resolve, reject) => {
 async function consumePromiseFive() {
   try {
     const response = await promiseFive;
-    console.log(response);
+    console.log(response); // { username: 'javascript', password: '12345' }
   } catch (error) {
     console.log(error);
   }
 }
 consumePromiseFive();
 
-/*
 async function getAllUsers() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
-
-    const data = response.json();
+    const data = await response.json(); // without await Promise[pending state]
     console.log(data);
   } catch (error) {
     console.log("E: ", error);
   }
 }
-
 getAllUsers();
-*/
 
 fetch("https://api.github.com/users/hiteshchoudhary")
   .then((response) => {
