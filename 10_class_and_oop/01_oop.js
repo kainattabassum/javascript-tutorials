@@ -4,13 +4,13 @@ const user = {
   signedIn: true,
 
   getUserDetails: function () {
-    // console.log("Got user detail from DB.");
+    console.log("Got user detail from DB.");
     // this > current contaxt
     console.log(this);
-    // console.log(`username: ${this.username}`);
+    console.log(`username: ${this.username}`);
   },
 };
-// console.log(user.username);
+// console.log(user.username); // kainat
 // console.log(user.getUserDetails());
 
 // ++++++++++++++++++++ CONSTRUCTOR function > create new instance
