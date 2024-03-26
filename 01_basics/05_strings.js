@@ -16,7 +16,7 @@ const gameName = new String("username-one");
 const newString = gameName.substring(4, 9); // cannot use negative value
 // console.log(newString);
 
-const slicedString = gameName.slice(-8, 8); // negative value -> rever order
+const slicedString = gameName.slice(-8, 8); // negative value -> reverse order
 // console.log(slicedString);
 
 const spacedText = "            user        ";
